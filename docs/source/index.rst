@@ -1,4 +1,4 @@
-# Welcome to ReguSync's documentation!
+“ Welcome to ReguSync's documentation!“
 
 **ReguSync** is a GRN-guided single-cell multimodal language model for cross-modal translation in single-cell and spatial multi-omics data.
 
