@@ -5,8 +5,10 @@ Requirements
 ------------
 
 ReguSync requires Python 3.9.19 or later and an NVIDIA GPU for model training
-and inference. The reference experiments used an NVIDIA RTX 4090 with CUDA
-12.5. A Linux environment is recommended for CUDA and FlashAttention support.
+and inference. The reference experiments used an NVIDIA RTX 4090. ReguSync is
+compatible with both Windows and Linux, and the minimal environment uses the
+PyTorch CUDA 12.1 runtime. The FlashAttention wheel referenced by
+``environment.yml`` is available for Linux x86_64 only.
 
 The principal software requirements are:
 
@@ -18,9 +20,12 @@ The principal software requirements are:
    scipy >= 1.13.1
    pandas >= 2.3.3
    scikit-learn >= 1.4.0
+   h5py >= 3.11.0
    flash-attn >= 2.5.2
    scanpy >= 1.9.8
    episcanpy >= 0.4.0
+   scvi-tools >= 1.1.6.post2
+   squidpy >= 1.6.1
    torchtext == 0.17.0
 
 Create the environment
@@ -31,18 +36,13 @@ create the provided Conda environment:
 
 .. code-block:: console
 
+   git clone https://github.com/ChrisOliver2345/ReguSync.git
    cd ReguSync
    conda env create -f environment.yml
    conda activate regusync
 
-Verify that PyTorch can access the GPU:
-
-.. code-block:: console
-
-   python -c "import torch; print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0))"
-
-The first value should be ``True`` and the second should identify the selected
-GPU.
+``environment.yml`` contains the minimal runtime dependencies used by the
+public pipeline.
 
 Download runtime files
 ----------------------

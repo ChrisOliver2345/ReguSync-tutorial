@@ -67,9 +67,10 @@ FlashAttention installation fails
 ---------------------------------
 
 FlashAttention depends on a compatible PyTorch, CUDA toolkit, compiler, and GPU
-environment. Confirm the PyTorch CUDA build before installing it. Linux is the
-recommended environment; native Windows installations are more likely to need
-toolchain-specific workarounds.
+environment. Confirm the PyTorch CUDA build before installing it. ReguSync is
+compatible with both Windows and Linux, but the FlashAttention wheel referenced
+by ``environment.yml`` is available for Linux x86_64 only. Windows users need a
+FlashAttention build compatible with their local toolchain.
 
 Read the Docs build fails
 -------------------------
