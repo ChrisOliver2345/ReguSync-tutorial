@@ -152,8 +152,7 @@ Biological preprocessing
 Losses and evaluation
 ---------------------
 
-``modal_a_loss`` and ``modal_b_loss`` default to ``nb``. For ATAC modality B,
-the model uses binary reconstruction behavior internally. ``evaluation_a`` and
+``modal_a_loss`` and ``modal_b_loss`` default to ``nb``. ``evaluation_a`` and
 ``evaluation_b`` default to ``NMI``. The public example and its output-writing
 path have been validated for the joint ``NMI`` configuration.
 
